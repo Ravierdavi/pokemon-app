@@ -1,0 +1,283 @@
+:root {
+  --primary-color: #db9600;
+  --secondary-color: #eaeaea;
+  --tertiary-color: rgb(255, 190, 9);
+  --bg-color: #272727;
+}
+
+/* reset / base */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  background-image: url("../assets/images/pokemon-ash-ketchum-charizard-bond-desktop-wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+button {
+  display: block;
+}
+
+/* header and footer styles */
+.site-header {
+  padding: 1.5rem 0 2.5rem 0;
+  background-color: var(--primary-color);
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2rem;
+  list-style-type: none;
+}
+
+.navigation ul li {
+  margin-left: 1.5rem;
+  font-size: 1.6rem;
+}
+
+#username_span {
+  margin-left: 0.2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  background-color: var(--primary-color);
+}
+
+.site-footer p {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+/* main styles */
+.main-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+}
+
+.card {
+  margin: auto;
+  padding: 1.5rem;
+
+  background-color: var(--tertiary-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+
+.user-section,
+.search-section {
+  display: none;
+  margin: 0 auto;
+}
+
+.card h2 {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: var(--secondary-color);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  transition: ease 0.4s;
+}
+
+.card h2:hover {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+}
+
+.card .form-row {
+  min-width: 400px;
+  padding: 1.5rem 1rem;
+  font-size: 1.2rem;
+  border: 2px solid white;
+}
+
+.form-row .message {
+  max-width: 420px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: var(--secondary-color);
+}
+
+.form-row label {
+  display: block;
+  width: fit-content;
+  padding: 0.5rem;
+  background-color: var(--secondary-color);
+  border-radius: 8px 8px 0 0;
+}
+
+.form-row input {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 0 6px 6px 6px;
+  font-size: 1.2rem;
+}
+
+.form-row input:focus {
+  background-color: #fff;
+}
+
+.form-row button {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+
+.form-row button:hover {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+}
+
+/* button hide content styles */
+.hide-content-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 0 1rem;
+  line-height: 40px;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--bg-color);
+  border: 2px solid var(--bg-color);
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.hide-content-btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--tertiary-color);
+  transition: all 0.35s;
+}
+
+.hide-content-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.hide-content-btn:hover {
+  color: var(--secondary-color);
+}
+
+.hide-content-btn:hover:after {
+  width: 100%;
+}
+
+/* info div search styles */
+#info_div_search {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+}
+
+#info_div_search img {
+  width: 150px;
+}
+
+#info_div_search h3 {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0;
+  background-color: var(--bg-color);
+  color: var(--tertiary-color);
+  border-radius: 8px;
+  font-size: 1.6rem;
+  text-align: center;
+  transition: ease 0.2s;
+}
+
+#info_div_search h3:hover {
+  color: var(--secondary-color);
+}
+
+#info_div_search p {
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
+}
+
+#btn-new-search {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--bg-color);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+
+#btn-new-search:hover {
+  color: var(--secondary-color);
+}
+
+/* others */
+.hidden {
+  display: none !important;
+}
+
+.section-active {
+  display: block;
+}

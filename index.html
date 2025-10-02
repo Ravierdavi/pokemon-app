@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pokemon App - Create your profile and Search Pokémons!"
+    />
+    <title>Pokemon App</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Font Awesome (jsDelivr) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+    />
+
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navigation">
+        <ul>
+          <li class="userProfile">
+            <a href="https://github.com/Ravierdavi" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li class="home">
+            <a href="index.html" target="_self"
+              ><i class="fa-solid fa-house-user"></i>
+              <span id="username_span"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1>Pokemon App</h1>
+    </header>
+
+    <main class="main-container">
+      <button
+        class="hide-content-btn"
+        aria-pressed="false"
+        aria-label="Hide content"
+      >
+        <span>Hide content</span>
+      </button>
+
+      <section class="card user-section section-active" id="user-section">
+        <h2>Create User</h2>
+        <div class="form-row">
+          <div id="message_div_user" class="message"></div>
+
+          <div class="form-user">
+            <label for="inp-user">Your username: </label>
+            <input type="text" id="username" class="inp-user" />
+            <button type="button" class="btn-create-user">Confirm</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card search-section" id="search-section">
+        <h2>Type pokemon name:</h2>
+        <div class="form-row">
+          <div id="message_div_search" class="message"></div>
+
+          <div class="form-search">
+            <label for="inp-search">Pokémon name: </label>
+            <input type="text" id="inp-search" class="input-search" />
+            <button type="button" class="btn-search">Search</button>
+          </div>
+        </div>
+
+        <div id="info_div_search">
+          <!-- Pokemon info will be displayed here -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Created by Ravier Davi - PokemonApp &copy;2025</p>
+    </footer>
+
+    <script src="js/user.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
